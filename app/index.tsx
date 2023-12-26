@@ -14,7 +14,6 @@ export default function AppEntry() {
   const router = useRouter();
   return (
     <Box bg={Palette.main} w="$full" h="$full" flexDirection="column" p="$5">
-      <StatusBar backgroundColor={Palette.main} />
       <Image
         width={80}
         height={80}
@@ -24,14 +23,14 @@ export default function AppEntry() {
       <Heading color="white" size="3xl">
         Bem vindo ao Sindmercadista!
       </Heading>
-      <Heading color="white" size="xs">
+      <Heading color="white" size="sm">
         O super app aonde você pode acompanhar nossas novidades, se associar e
         acompanhar ações do Sindmercadista.
       </Heading>
       <Box gap="$3" mt={"auto"}>
         <Button
           padding="$1"
-          backgroundColor="$green800"
+          backgroundColor={Palette.darkerMain}
           onPress={() => router.replace("/auth/sign-in")}
         >
           <Text color="white" size="xs">
@@ -39,8 +38,17 @@ export default function AppEntry() {
           </Text>
         </Button>
         <Button
+          padding="$1"
+          backgroundColor={Palette.darkerMain}
+          onPress={() => router.replace("/main/")}
+        >
+          <Text color="white" size="xs">
+            ENTRAR COMO VISITANTE
+          </Text>
+        </Button>
+        <Button
           padding="$3"
-          backgroundColor="$green800"
+          backgroundColor={Palette.darkerMain}
           h="auto"
           onPress={() => router.replace("/auth/sign-up")}
         >

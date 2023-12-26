@@ -22,10 +22,10 @@ export default function SignIn() {
         alt=""
         source={require("../../assets/Icons/app-icon.png")}
       />
-      <Heading color="white" size="3xl">
+      <Heading color="white" size="2xl">
         Associe-se
       </Heading>
-      <Heading color="white" size="xs">
+      <Heading color="white" size="sm">
         Associe-se para estar por dentro de tudo que o Sindmercadista oferece a
         você.
       </Heading>
@@ -43,7 +43,7 @@ export default function SignIn() {
           padding="$3"
           backgroundColor="$green800"
           h="auto"
-          onPress={() => router.replace("/auth/sign-up")}
+          onPress={() => router.replace("/")}
         >
           <Text color="white" size="xs">
             Voltar à tela inicial
